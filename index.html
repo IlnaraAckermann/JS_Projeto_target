@@ -9,24 +9,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div><h1>Desafio Target</h1></div>
+        <h1>Desafio Target</h1>
         
-        <div><h2>Job Rotation - Ribeirão Preto - ATUALIZADO</h2></div>
+        <h2>Job Rotation - Ribeirão Preto - ATUALIZADO</h2>
         
         <div>
             <p>1) Observe o trecho de código abaixo:</p>
-            <code> int INDICE = 13, SOMA = 0, K = 0; <br/>
-                enquanto K < INDICE faça <br/>
-                {<br/>
-                K = K + 1;<br/>
-                SOMA = SOMA + K;<br/>
-                }<br/>
-                imprimir(SOMA); </code>
+            
+            <div class="code">
+                <code> 
+                    int INDICE = 13, SOMA = 0, K = 0; <br/>
+                    enquanto K < INDICE faça <br/>
+                    {<br/>
+                    K = K + 1;<br/>
+                    SOMA = SOMA + K;<br/>
+                    }<br/>
+                    imprimir(SOMA); 
+                </code>
+            </div>
+
                 <p>Ao final do processamento, qual será o valor da variável SOMA?</p>
                 <h4>Resolução</h4>
                 <hr class="a">
                 <button onclick="exibirResolverCodigo()">Resposta</button>
-                <div id='respostaPseudoCodigo' class="respostaPseudoCodigo">
+                <div id='respostaPseudoCodigo' class="resposta">
                     "O código acima imprimirá o valor da variavel <b>SOMA</b> que é: <b>91</b>
                 </div>
         </div>   
@@ -40,7 +46,7 @@
             <p>Informe um numero para verificar se ele existe dentro da sequência  fibonacci.</p>
             <input id="numeroFibonacci" type="number">
             <button onclick="fibonacci()">Ok</button>
-            <div id='respostaFibonacci'></div>
+            <div id='respostaFibonacci' class="resposta"></div>
         </div>
     
         <div>
@@ -56,7 +62,7 @@
             <h4>Resolução</h4>
             <hr class="a">    
             <button onclick="resolverLogica()">Resposta</button>
-            <div id='respostaLogica' class="respostaLogica">
+            <div id='respostaLogica' class="resposta">
                 <p> <b>a) 1, 3, 5, 7, 9</b></p>
                 <p><i>numeros impares (n+2)</i></p>
                 <p><b>b) 2, 4, 8, 16, 32, 64, 128</b></p>
@@ -84,7 +90,7 @@
             <h4>Resolução</h4>
             <hr class="a">
             <button onclick="resolverVeiculo()">Resposta</button>
-            <div id='respostaDistancia' class="respostaDistancia">
+            <div id='respostaDistancia' class="resposta">
             <p>O carro e o caminhão estão à mesma distância de Ribeirão Preto ao eles se cruzarem, eles se encontram a 60,9 km de Ribeirão Preto.</p>
             <p>Primeiro vamos determinar o ponto de referência como Ribeirão Preto, logo vamos ter as seguintes equações</p>
             <p><b>DistânciaCarro = velocidadeCarro * Tempo</b></p>
@@ -120,7 +126,7 @@
             <p>Digite uma string qualquer.</p>   
             <input id="stringRecebida" type="text">
             <button onclick="inverterString()">Ok</button>
-            <div id='respostaStringInvertida'></div>
+            <div id='respostaStringInvertida' class="resposta"></div>
         </div>
     </body>
 </html>

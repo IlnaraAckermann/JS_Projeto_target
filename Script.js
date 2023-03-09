@@ -5,6 +5,7 @@ function exibirResolverCodigo(){
 function fibonacci(){
     var termo = parseInt(document.getElementById('numeroFibonacci').value);
     var respostaFibonacci = document.getElementById('respostaFibonacci');
+    document.getElementById('respostaFibonacci').style.display = 'block';
     
     var penultimo=0, ultimo=1;
     var numero;
@@ -25,7 +26,7 @@ function fibonacci(){
        }
     }
     else{
-        respostaFibonacci.innerHTML= "O numero " + termo + " não faz parte da sequencia Fibonacci";
+        respostaFibonacci.innerHTML= "O numero " + termo + " é negativo não faz parte da sequencia Fibonacci";
     }
 }
 
@@ -41,6 +42,7 @@ function resolverVeiculo(){
 function inverterString(){
     var stringRecebida = document.getElementById('stringRecebida').value;
     var respostaStringInvertida = document.getElementById('respostaStringInvertida');
+    document.getElementById('respostaStringInvertida').style.display = 'block';
 
     let arrayStrigRecebida = stringRecebida.split('');
     let newString = "";
@@ -50,5 +52,6 @@ function inverterString(){
     }
 
     respostaStringInvertida.innerHTML= "A string invertida é: <b>"+ newString +"</b>"
+
 
 }
