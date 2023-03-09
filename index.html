@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto TargerSistemas</title>
+        <script src="Script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div><h1>Desafio Target</h1></div>
+        
+        <div><h2>Job Rotation - Ribeirão Preto - ATUALIZADO</h2></div>
+        
+        <div>
+            <p>1) Observe o trecho de código abaixo:</p>
+            <code> int INDICE = 13, SOMA = 0, K = 0; <br/>
+                enquanto K < INDICE faça <br/>
+                {<br/>
+                K = K + 1;<br/>
+                SOMA = SOMA + K;<br/>
+                }<br/>
+                imprimir(SOMA); </code>
+                <p>Ao final do processamento, qual será o valor da variável SOMA?</p>
+                <h4>Resolução</h4>
+                <hr class="a">
+                <button onclick="exibirResolverCodigo()">Resposta</button>
+                <div id='respostaPseudoCodigo' class="respostaPseudoCodigo">
+                    "O código acima imprimirá o valor da variavel <b>SOMA</b> que é: <b>91</b>
+                </div>
+        </div>   
+    
+        <div> 
+            <p> 2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.  </p>
+            <p>IMPORTANTE:</p>
+            <p>Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;</p>
+            <h4>Resolução</h4>
+            <hr class="a">
+            <p>Informe um numero para verificar se ele existe dentro da sequência  fibonacci.</p>
+            <input id="numeroFibonacci" type="number">
+            <button onclick="fibonacci()">Ok</button>
+            <div id='respostaFibonacci'></div>
+        </div>
+    
+        <div>
+            <p>3) Descubra a lógica e complete o próximo elemento:</p>
+            <ol class="a">
+                <li>) 1, 3, 5, 7, ___</li>
+                <li>) 2, 4, 8, 16, 32, 64, ____</li>
+                <li>) 0, 1, 4, 9, 16, 25, 36, ____</li>
+                <li>) 4, 16, 36, 64, ____</li>
+                <li>) 1, 1, 2, 3, 5, 8, ____ </li>
+                <li>) 2,10, 12, 16, 17, 18, 19, ____</li>
+                </ol>
+            <h4>Resolução</h4>
+            <hr class="a">    
+            <button onclick="resolverLogica()">Resposta</button>
+            <div id='respostaLogica' class="respostaLogica">
+                <p> <b>a) 1, 3, 5, 7, 9</b></p>
+                <p><i>numeros impares (n+2)</i></p>
+                <p><b>b) 2, 4, 8, 16, 32, 64, 128</b></p>
+                <p><i>Multiplicar o numero anterior por 2 (n*2)</i></p>
+                <p><b>c) 0, 1, 4, 9, 16, 25, 36, 49</b></p>
+                <p><i>Soma numero impares (1, 2, 3, 5, 7, 9, 11, 13...)</i></p>
+                <p><b>d) 4, 16, 36, 64, 100</b></p>
+                <p><i>Soma multiplos de 8 começando do 12 (12,20,28,36...)</i></p>
+                <p><b>e) 1, 1, 2, 3, 5, 8, 13</b></p>
+                <p><i>Fibonacci</i></p>
+                <p><b>f) 2, 10, 12, 16, 17, 18, 19, 200</b></p>
+                <p><i>Numeros começados com D</i></p>
+            </div>
+        </div>
+
+
+        <div>
+            <p>4 - Dois veículos (um carro e um caminhão) saem respectivamente de cidades opostas pela mesma rodovia. O carro de Ribeirão Preto em direção a Franca, a uma velocidade constante de 110 km/h e o caminhão de Franca em direção a Ribeirão Preto a uma velocidade constante de 80 km/h. Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?</p>     
+            <p>IMPORTANTE:</p>
+            <ol class="a">
+                <li>) Considerar a distância de 100km entre a cidade de Ribeirão Preto <-> Franca.</li>
+                <li>) Considerar 2 pedágios como obstáculo e que o caminhão leva 5 minutos a mais para passar em cada um deles e o carro possui tag de pedágio (Sem Parar)</li>
+                <li>) Explique como chegou no resultado.</li>
+            </ol>
+            <h4>Resolução</h4>
+            <hr class="a">
+            <button onclick="resolverVeiculo()">Resposta</button>
+            <div id='respostaDistancia' class="respostaDistancia">
+            <p>O carro e o caminhão estão à mesma distância de Ribeirão Preto ao eles se cruzarem, eles se encontram a 60,9 km de Ribeirão Preto.</p>
+            <p>Primeiro vamos determinar o ponto de referência como Ribeirão Preto, logo vamos ter as seguintes equações</p>
+            <p><b>DistânciaCarro = velocidadeCarro * Tempo</b></p>
+            <p><b>DistânciaCaminhão = 100km - velocidadeCaminhão * Tempo</b></p>
+            <p>Como o caminhão tem que parar em dois pedágios perdendo 5 minutos em cada devemos fazer uma correção em sua equação, para isso primeiro calculamos o tempo de viagem sem o pedágio.</p>
+            <p><b>TempoSemPedágio = 100/80 = 1,25h</b></p> 
+            <p>10 minutos equivale a 0,17h assim o tempo de viagem total do caminhão será de <b>1,42h</b> agora vamos calcular a velocidade média do caminhão</p>
+            <p><b>VelocidadeMediaCaminhão = 100/1,42 = 70,6kmh</b></p>
+            <p>Agora igualamos as equações para encontrar o ponto em que eles se encontram</p>
+            <p><b>Tempo = DistânciaCarro / velocidadeCarro </b></p>
+            <p><b>Tempo = (DistânciaCaminhão-100km) /- VelocidadeMediaCaminhão </b></p>
+            <p><b>DistânciaCarro = DistânciaCaminhão</b></p>
+            <p><b>Distância / velocidadeCarro = (Distância-100km)/-VelocidadeMediaCaminhão</b></p>
+            <p><b>-VelocidadeMediaCaminhão * Distância = velocidadeCarro * Distância - velocidadeCarro * 100km</b></p>
+            <p><b>Distância = velocidadeCarro * 100km / velocidadeCarro + VelocidadeMediaCaminhão</b></p>
+            <p><b>Distância = 110 * 100 / 110 + 70,6</b></p>
+            <p><b>Distância ≅ 60,9</b></p>
+            </div>
+
+
+        </div>
+
+
+        <div>    
+            <p>5) Escreva um programa que inverta os caracteres de um string.</p>        
+            <p>IMPORTANTE:</p>
+            <ol class="a">
+                <li>) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;</li>
+                <li>) Evite usar funções prontas, como, por exemplo, reverse;</li>
+            </ol>
+            <h4>Resolução</h4>
+            <hr class="a">
+            <p>Digite uma string qualquer.</p>   
+            <input id="stringRecebida" type="text">
+            <button onclick="inverterString()">Ok</button>
+            <div id='respostaStringInvertida'></div>
+        </div>
+    </body>
+</html>
